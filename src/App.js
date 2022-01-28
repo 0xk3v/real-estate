@@ -1,11 +1,16 @@
+import { ThemeProvider } from "styled-components";
+import { About, Hero, NavBar } from "./Components";
+import GlobalStyles from "./global";
+import theme from "./theme";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Hello Estate
-        <h1>Hola</h1>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <NavBar />
+      <Hero />
+      <About />
+    </ThemeProvider>
   );
 }
 
